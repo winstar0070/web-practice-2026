@@ -2,7 +2,13 @@ body {
     margin: 0;
 }
 
-/* 헤더 고정 + flex로 가로 배치 */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 헤더 고정 + 로고, 메뉴, 장바구니 가로 배치 */
 header {
     position: sticky;
     top: 0;
@@ -15,12 +21,17 @@ header {
     background: lightgray;
 }
 
-nav a {
-    margin-right: 10px;
+header h1 {
+    margin: 0;
 }
 
-/* 배경 + 글자 가운데 정렬 */
-.banner {
+nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+/* 배경 + 문구 상하좌우 가운데 정렬 */
+#banner {
     height: 250px;
     background: linear-gradient(to right, lightblue, white);
     display: flex;
@@ -30,30 +41,42 @@ nav a {
     text-align: center;
 }
 
-section {
+#products {
     padding: 20px;
     scroll-margin-top: 100px;
 }
 
-/* 상품을 3칸으로 배치 */
-.products {
+/* 상품 목록을 3열로 배치 */
+#products ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
 
-.product {
+#products li {
     position: relative;
     border: 1px solid gray;
-    padding: 30px 10px 10px;
-    scroll-margin-top: 100px;
 }
 
-/* 상품 왼쪽 위에 배지 표시 */
+#products img {
+    display: block;
+    width: 100%;
+}
+
+#products strong {
+    display: block;
+}
+
+/* 상품 왼쪽 상단에 배지 표시 */
 .badge {
     position: absolute;
     top: 0;
     left: 0;
     background: orange;
     padding: 3px;
+}
+
+footer {
+    padding: 20px;
+    background: lightgray;
 }
