@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+/* 헤더 고정 + flex로 가로 배치 */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    background: lightgray;
+}
+
+nav a {
+    margin-right: 10px;
+}
+
+/* 배경 + 글자 가운데 정렬 */
+.banner {
+    height: 250px;
+    background: linear-gradient(to right, lightblue, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    scroll-margin-top: 100px;
+}
+
+/* 상품을 3칸으로 배치 */
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.product {
+    position: relative;
+    border: 1px solid gray;
+    padding: 30px 10px 10px;
+    scroll-margin-top: 100px;
+}
+
+/* 상품 왼쪽 위에 배지 표시 */
+.badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: orange;
+    padding: 3px;
+}
